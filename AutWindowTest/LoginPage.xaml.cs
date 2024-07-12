@@ -74,7 +74,7 @@ public partial class LoginPage : ContentPage
         if (!string.IsNullOrEmpty(Password.Text))
         {
             show_empty_Pass.IsVisible = false;
-            w_error.IsVisible = false;
+            w_error.IsVisible = false; 
         }
     }
 }
