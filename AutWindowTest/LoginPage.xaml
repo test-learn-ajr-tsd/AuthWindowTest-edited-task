@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutWindowTest.LoginPage">
+
+    <StackLayout Padding="15">
+        <StackLayout HeightRequest="80">
+            <Label Text="Логин:" TextColor="Black" FontAttributes="Bold" />
+            <Entry x:Name="Login"  TextChanged="Login_TextChanged" />
+            <Label x:Name="show_empty_Login" IsVisible="False" TextColor="Red" Text="Введите имя учетной записи" />
+        </StackLayout>
+        <StackLayout HeightRequest="80">
+            <Label Text="Пароль:" TextColor="Black" FontAttributes="Bold" />            
+            <Entry x:Name="Password" IsPassword="True" TextChanged="Password_TextChanged" />
+            <Label x:Name="show_empty_Pass" IsVisible="False" TextColor="Red" Text="Введите пароль" />
+        </StackLayout>
+        <StackLayout HeightRequest="40">
+            <Border x:Name="w_error" Padding="5" IsVisible="False">
+                <Label Text="НЕправльный логин и/или пароль!!!" TextColor="Red" />
+            </Border>            
+        </StackLayout>        
+        <Button x:Name = "Auth" Text = "Войти" Clicked = "Auth_Clicked" />
+    </StackLayout>
+</ContentPage>
